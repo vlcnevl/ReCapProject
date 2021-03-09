@@ -29,7 +29,7 @@ namespace DataAccess.Concrete.EntityFramework.Repository
                                  BrandName = b.BrandName,
                                  ColorName = co.ColorName,
                                  DailyPrice = c.DailyPrice,
-                                 Descriptions = c.Descriptions,
+                                 Descriptions = c.Description,
                                  ModelYear = c.ModelYear
                              };
                 return result.ToList();
