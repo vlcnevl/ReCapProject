@@ -2,6 +2,7 @@
 using DataAccess.Concrete.EntityFramework.Repository;
 using Entities.Concrete;
 using System;
+using Core.Entities.Concrete;
 
 namespace ConsoleUI
 {
@@ -84,17 +85,17 @@ namespace ConsoleUI
                         CarByModelYear(carManager, brandManager, colorManager);
                         break;
                     case 11:
-                        GetAllUserList(userManager);
+                      //  GetAllUserList(userManager);
                         CustomerAddition(customerManager);
                         break;
                     case 12:
                         GetAllCustomerList(customerManager);
                         break;
                     case 13:
-                        UserAddition(userManager);
+                        //UserAddition(userManager);
                         break;
                     case 14:
-                        GetAllUserList(userManager);
+                      //  GetAllUserList(userManager);
                         break;
                     case 15:
                         GetAllCarDetails(carManager);
@@ -154,28 +155,28 @@ namespace ConsoleUI
 
         }
 
-        private static void UserAddition(UserManager userManager)
-        {
-            Console.WriteLine("First Name: ");
-            string userNameForAdd = Console.ReadLine();
-            Console.WriteLine("Last Name: ");
-            string userSurnameForAdd = Console.ReadLine();
-            Console.WriteLine("Email Name: ");
-            string userEmailForAdd = Console.ReadLine();
-            Console.WriteLine("Password Name: ");
-            string userPasswordForAdd = Console.ReadLine();
+        //private static void UserAddition(UserManager userManager)
+        //{
+        //    Console.WriteLine("First Name: ");
+        //    string userNameForAdd = Console.ReadLine();
+        //    Console.WriteLine("Last Name: ");
+        //    string userSurnameForAdd = Console.ReadLine();
+        //    Console.WriteLine("Email Name: ");
+        //    string userEmailForAdd = Console.ReadLine();
+        //    Console.WriteLine("Password Name: ");
+        //    string userPasswordForAdd = Console.ReadLine();
 
 
-            User userForAdd = new User
-            {
-                FirstName = userNameForAdd,
-                LastName = userSurnameForAdd,
-                Email = userEmailForAdd,
-                Password = userPasswordForAdd
+        //    User userForAdd = new User
+        //    {
+        //        FirstName = userNameForAdd,
+        //        LastName = userSurnameForAdd,
+        //        Email = userEmailForAdd,
+        //        Password = userPasswordForAdd
 
-            };
-            userManager.Add(userForAdd);
-        }
+        //    };
+        //    userManager.Add(userForAdd);
+        //}
 
         private static void GetAllCustomerList(CustomerManager customerManager)
         {
@@ -202,14 +203,14 @@ namespace ConsoleUI
             customerManager.Add(customerForAdd);
         }
 
-        private static void GetAllUserList(UserManager userManager)
-        {
-            Console.WriteLine("Kullanıcı Listesi: \nId\tFirst Name\tLast Name\tEmail\tPassword");
-            foreach (var user in userManager.GetAll().Data)
-            {
-                Console.WriteLine($"{user.UserId}\t{user.FirstName}\t{user.LastName}\t{user.Password}");
-            }
-        }
+        //private static void GetAllUserList(UserManager userManager)
+        //{
+        //    Console.WriteLine("Kullanıcı Listesi: \nId\tFirst Name\tLast Name\tEmail\tPassword");
+        //    foreach (var user in userManager.GetAll().Data)
+        //    {
+        //        Console.WriteLine($"{user.UserId}\t{user.FirstName}\t{user.LastName}\t{user.Password}");
+        //    }
+        //}
 
         private static void CarByModelYear(CarManager carManager, BrandManager brandManager, ColorManager colorManager)
         {
@@ -240,7 +241,7 @@ namespace ConsoleUI
             int carId = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"\n\nId'si {carId} olan araba: \nId\tColor Name\tBrand Name\tModel Year\tDaily Price\tDescriptions");
             Car carById = carManager.GetById(carId).Data;
-            Console.WriteLine($"{carById.CarId}\t{colorManager.GetById(carById.ColorId).Data.ColorName}\t\t{brandManager.GetById(carById.BrandId).Data.BrandName}\t\t{carById.ModelYear}\t\t{carById.DailyPrice}\t\t{carById.Description}");
+            Console.WriteLine($"{carById.CarId}\t{colorManager.GetById(carById.ColorId).Data.ColorName}\t\t{brandManager.GetById(carById.BrandId).Data.BrandName}\t\t{carById.ModelYear}\t\t{carById.DailyPrice}\t\t{carById.Descriptions}");
         }
 
         private static void CarListByColor(CarManager carManager)
@@ -285,7 +286,7 @@ namespace ConsoleUI
             Console.WriteLine("Model Year: ");
             string modelYearForUpdate = Console.ReadLine();
 
-            Car carForUpdate = new Car { CarId = carIdForUpdate, BrandId = brandIdForUpdate, ColorId = colorIdForUpdate, DailyPrice = dailyPriceForUpdate, Description = descriptionForUpdate, ModelYear = modelYearForUpdate };
+            Car carForUpdate = new Car { CarId = carIdForUpdate, BrandId = brandIdForUpdate, ColorId = colorIdForUpdate, DailyPrice = dailyPriceForUpdate, Descriptions = descriptionForUpdate, ModelYear = modelYearForUpdate };
             carManager.Update(carForUpdate);
         }
 
@@ -319,7 +320,7 @@ namespace ConsoleUI
             Console.WriteLine("Model Year: ");
             string modelYearForAdd = Console.ReadLine();
 
-            Car carForAdd = new Car { BrandId = brandIdForAdd, ColorId = colorIdForAdd, DailyPrice = dailyPriceForAdd, Description = descriptionForAdd, ModelYear = modelYearForAdd };
+            Car carForAdd = new Car { BrandId = brandIdForAdd, ColorId = colorIdForAdd, DailyPrice = dailyPriceForAdd, Descriptions = descriptionForAdd, ModelYear = modelYearForAdd };
             carManager.Add(carForAdd);
         }
 
@@ -337,7 +338,7 @@ namespace ConsoleUI
             Console.WriteLine("Arabaların Listesi:  \nId\tColor Name\tBrand Name\tModel Year\tDaily Price\tDescriptions");
             foreach (var car in carManager.GetAll().Data)
             {
-                Console.WriteLine($"{car.CarId}\t{car.ColorId}\t\t{car.BrandId}\t\t{car.ModelYear}\t\t{car.DailyPrice}\t\t{car.Description}");
+                Console.WriteLine($"{car.CarId}\t{car.ColorId}\t\t{car.BrandId}\t\t{car.ModelYear}\t\t{car.DailyPrice}\t\t{car.Descriptions}");
             }
         }
 
