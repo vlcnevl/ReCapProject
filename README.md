@@ -21,7 +21,7 @@
 <li>You can change token options as you wish.</li>
 </ul>
 </li>
-<ul>
+ <ul>
  <li><a href="https://github.com/vlcnevl/ReCapProject/blob/main/RentACarDb.sql">Database script</a></li>
 </ul>
 <li>Start the project</li>
