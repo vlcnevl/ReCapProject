@@ -44,8 +44,12 @@
 <li>Layered Architecture Design Pattern</li>
 <li>AOP</li>
 <li>JWT</li>
-<li>Autofac dependency resolver</li>
+<li>Autofac dependency resolvers</li>
 <li>IoC</li>
 </ul>
+  
+  <ul>
+  <li><a href="">Database script</a></li>
+  </ul>
 </div>
 
