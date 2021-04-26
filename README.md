@@ -21,7 +21,7 @@
 <li>You can change token options as you wish.</li>
 </ul>
 </li>
- <li><a href="">Database Script</a></li>
+ <li><a href="https://github.com/vlcnevl/ReCapProject/blob/main/RentACarDb.sql">Database Script</a></li>
 <li>Start the project</li>
 </ol>
 </div>
