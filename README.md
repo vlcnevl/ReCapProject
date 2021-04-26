@@ -20,6 +20,9 @@
 <ul>
 <li>You can change token options as you wish.</li>
 </ul>
+    <ul>
+  <li><a href="https://github.com/vlcnevl/ReCapProject/blob/main/RentACarDb.sql">Database script</a></li>
+  </ul>
 </li>
 <li>Start the project</li>
 </ol>
@@ -48,8 +51,5 @@
 <li>IoC</li>
 </ul>
   
-  <ul>
-  <li><a href="https://github.com/vlcnevl/ReCapProject/blob/main/RentACarDb.sql">Database script</a></li>
-  </ul>
 </div>
 
