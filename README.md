@@ -49,7 +49,7 @@
 </ul>
   
   <ul>
-  <li><a href="">Database script</a></li>
+  <li><a href="https://github.com/vlcnevl/ReCapProject/blob/main/RentACarDb.sql">Database script</a></li>
   </ul>
 </div>
 
