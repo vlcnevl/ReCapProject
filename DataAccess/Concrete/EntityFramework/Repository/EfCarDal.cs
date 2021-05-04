@@ -32,6 +32,7 @@ namespace DataAccess.Concrete.EntityFramework.Repository
                                  CarId = car.CarId,
                                  Descriptions = car.Descriptions,
                                  DailyPrice = car.DailyPrice,
+                                 Fuel = car.Fuel,
                                  ModelYear = car.ModelYear,
                                  BrandId = brand.BrandId,
                                  BrandName = brand.BrandName,

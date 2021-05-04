@@ -15,5 +15,6 @@ namespace Entities.DTOs
         public decimal DailyPrice { get; set; }
         public string ModelYear { get; set; }
         public string Descriptions { get; set; }
+        public string Fuel { get; set; }
     }
 }

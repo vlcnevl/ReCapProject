@@ -13,5 +13,6 @@ namespace Entities.Concrete
         public string Descriptions { get; set; }
         public int BrandId { get; set; }
         public int ColorId { get; set; }
+        public string Fuel{ get; set; }
     }
 }
