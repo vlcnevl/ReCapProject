@@ -1,4 +1,5 @@
 ﻿using Core.Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
@@ -47,5 +48,7 @@ namespace Business.Constants
         public static string BadPassword = "Daha iyi bir parola oluşturmayı deneyin";
 
         public static string AuthorizationDenied = "Yetkiniz yok";
+
+        public static string CarNotFound = "Araç bulunamadı";
     }
 }

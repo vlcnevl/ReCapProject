@@ -43,7 +43,7 @@ namespace Business.Concrete
             return new SuccessResult(Messages.DeletedBrand);
         }
         [CacheAspect]
-        [SecuredOperation("admin")]
+     //   [SecuredOperation("admin")]
         [PerformanceAspect(5)] 
         public IDataResult<List<Brand>> GetAll()
         {

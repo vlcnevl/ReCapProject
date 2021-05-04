@@ -50,9 +50,10 @@ namespace Business.Concrete
             return new SuccessDataResult<Rental>(_rentalDal.Get(I => I.RentalId == id));
         }
 
+        [CacheAspect]
         public IDataResult<List<RentalDetailDto>> GetRentalDetails(Expression<Func<Rental, bool>> filter = null)
         {
-            return new SuccessDataResult<List<RentalDetailDto>>(_rentalDal.GetCarDetails(filter), Messages.ReturnedRental);
+            return new SuccessDataResult<List<RentalDetailDto>>(_rentalDal.GetRentalDetails(filter), Messages.ReturnedRental);
         }
 
         [ValidationAspect(typeof(RentalValidator))]
@@ -62,5 +63,6 @@ namespace Business.Concrete
             _rentalDal.Update(rental);
             return new SuccessResult(Messages.UpdatedRental);
         }
+
     }
 }
