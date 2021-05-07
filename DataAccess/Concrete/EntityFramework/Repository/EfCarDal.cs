@@ -66,7 +66,11 @@ namespace DataAccess.Concrete.EntityFramework.Repository
                                  BrandId = brand.BrandId,
                                  BrandName = brand.BrandName,
                                  ColorId = color.ColorId,
-                                 ColorName = color.ColorName
+                                 ColorName = color.ColorName,
+                                 CarImages = (from images in context.CarImages
+                                              where (car.CarId == images.CarId)
+                                              select new CarImage { Id = images.Id, CarId = car.CarId, Date = images.Date
+                                              , ImagePath = images.ImagePath }).ToList()
                              };
                 return filter == null ? result.ToList() : result.Where(filter).ToList();
 
